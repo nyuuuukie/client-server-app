@@ -2,6 +2,10 @@
 Learning how to create simple client-server app (C#, WPF, WCF, MySQL, Entity Framework)
 
 Useful links:
+  [WCF(RIA Services) - helps spend less time with data-sending side](https://habr.com/ru/post/203820/)
+  [WPF Lessons](https://metanit.com/sharp/wpf/1.php)
+  [MVVM + WPF](https://habr.com/ru/post/338518/)
+  [Quick start with WPF](https://habr.com/ru/post/427325/)
   [Simple client-server WCF example](https://vc.ru/dev/177588-prostoy-i-nadezhnyy-c-klient-server-ispolzuya-wcf)
   [One other client-server example](http://www.devowl.net/2017/07/WCF-service-csharp-client-server.html)
   [Пример создания WCF сервиса работающего внутри службы Windows](https://habr.com/ru/post/331952/)
@@ -13,7 +17,10 @@ Useful links:
   [Changing between pages](https://stackoverflow.com/questions/24932864/change-between-pages-in-wpf)
   
 [IIS Architecture](https://habr.com/ru/post/189086/)
+[Визуальное проектирование БД в MySQL WorkBench](https://habr.com/ru/post/175985/)
+[Как работает РБД](https://habr.com/ru/company/mailru/blog/266811/)
 [WCF Service + DB](https://tekslate.com/example-create-wcf-service-data-base)
+[WPF + EF](https://metanit.com/sharp/wpf/19.3.php)
 [WCF + WPF + EF](https://stackoverflow.com/questions/10806081/good-example-of-combining-wpf-wcf-entity-framework)
 [Dynamic MySQL Connection for EF](https://stackoverflow.com/questions/20277677/dynamic-mysql-database-connection-for-entity-framework-6)
 [Connect to MySQL DB](https://stackoverflow.com/questions/21618015/how-to-connect-to-mysql-database)
