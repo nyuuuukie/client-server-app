@@ -1,9 +1,9 @@
 # client-server-app
 Learning how to create simple client-server app (C#, WPF, WCF, MySQL, Entity Framework)
 
-Useful links:
+# Useful links
 
-# WPF
+## WPF
   * [WPF Lessons](https://metanit.com/sharp/wpf/1.php)
   * [MVVM + WPF](https://habr.com/ru/post/338518/)
   *[UWP - технология для создания приложений под Win10](https://metanit.com/sharp/uwp/1.1.php)
@@ -20,11 +20,11 @@ Useful links:
   * [One another DateTimePicker](https://gist.github.com/qwertie/1150228)
   * [DateTimePicker for WPF like in WinForms](https://www.codeproject.com/Articles/132992/A-WPF-DateTimePicker-That-Works-Like-the-One-in-Wi)
 
-# Filter
+## Filter
   * [Filter DataGrid](https://stackoverflow.com/questions/15568325/filter-a-datagrid-in-wpf)
   * [Filter list](https://stackoverflow.com/questions/10745900/filter-a-list-by-another-list-c-sharp)
   
-# WCF  
+## WCF  
   * [IIS Architecture](https://habr.com/ru/post/189086/)
   * [WCF(RIA Services) - helps spend less time with data-sending side](https://habr.com/ru/post/203820/)
   * [Simple client-server WCF example](https://vc.ru/dev/177588-prostoy-i-nadezhnyy-c-klient-server-ispolzuya-wcf)
@@ -41,11 +41,11 @@ Useful links:
   * [Load files over HTTP](https://www.codeproject.com/Articles/166763/WCF-Streaming-Upload-Download-Files-Over-HTTP)
   * [WCF & WPF Chat App](https://www.codeproject.com/Articles/19752/WCF-WPF-Chat-Application)
 
-# Additional
+## Additional
   * [REST vs SOAP](https://habr.com/ru/post/131343/)
   * [Changing between pages](https://stackoverflow.com/questions/24932864/change-between-pages-in-wpf)
 
-# Database
+## Database
 * [Визуальное проектирование БД в MySQL WorkBench](https://habr.com/ru/post/175985/)
 * [Как работает РБД](https://habr.com/ru/company/mailru/blog/266811/)
 * [WCF Service + DB](https://tekslate.com/example-create-wcf-service-data-base)
@@ -55,10 +55,10 @@ Useful links:
 * [Connect to MySQL DB](https://stackoverflow.com/questions/21618015/how-to-connect-to-mysql-database)
 * [Connect C# to MySQL](https://www.codeproject.com/Articles/43438/Connect-C-to-MySQL)
 
-# Json
+## Json
 * [JOIN in EF](https://stackoverflow.com/questions/21051612/entity-framework-join-3-tables)
 * [JSON](https://docs.microsoft.com/ru-ru/dotnet/standard/serialization/system-text-json-how-to?pivots=dotnet-5-0)
 * [Jquery + Json + EF + WCF](https://stackanswers.net/questions/sending-array-of-objects-to-wcf)
 
-# SMTP
+## SMTP
 * [Работа с SMTP](https://metanit.com/sharp/net/8.1.php)
