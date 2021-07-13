@@ -1,0 +1,31 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.29230.47
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ObserverService", "ObserverService.csproj", "{104CCC34-7A35-4FD3-949D-03D6F2B39C39}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ObserverServiceHost", "..\ObserverServiceHost\ObserverServiceHost.csproj", "{26432A61-8BA7-4384-A34C-748E9E138A59}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{104CCC34-7A35-4FD3-949D-03D6F2B39C39}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{104CCC34-7A35-4FD3-949D-03D6F2B39C39}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{104CCC34-7A35-4FD3-949D-03D6F2B39C39}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{104CCC34-7A35-4FD3-949D-03D6F2B39C39}.Release|Any CPU.Build.0 = Release|Any CPU
+		{26432A61-8BA7-4384-A34C-748E9E138A59}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{26432A61-8BA7-4384-A34C-748E9E138A59}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{26432A61-8BA7-4384-A34C-748E9E138A59}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{26432A61-8BA7-4384-A34C-748E9E138A59}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {3C59BF4A-781B-441F-B063-69E2A481C5A4}
+	EndGlobalSection
+EndGlobal

@@ -1,0 +1,187 @@
+﻿<Window x:Class ="ObserverService.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:wf="clr-namespace:System.Windows.Forms;assembly=System.Windows.Forms"
+        xmlns:local="clr-namespace:ObserverService"
+        mc:Ignorable="d"
+        Title="Observer Client" Height="600" Width="600">
+    <Window.Resources>
+        <Style x:Key="TransparentStyle" TargetType="{x:Type Button}">
+            <Setter Property="Template">
+                <Setter.Value>
+                    <ControlTemplate TargetType="{x:Type Button}">
+                        <Border Background="{TemplateBinding Background}" BorderBrush="Black" BorderThickness="1">
+                            <ContentPresenter HorizontalAlignment="Center" VerticalAlignment="Center"/>
+                        </Border>
+                    </ControlTemplate>
+                </Setter.Value>
+            </Setter>
+            <Style.Triggers>
+                <Trigger Property="IsMouseOver" Value="True"></Trigger>
+            </Style.Triggers>
+        </Style>
+    </Window.Resources>
+
+    <Border>
+        <DockPanel x:Name="MainDockPanel" Margin="25, 25">
+
+            <StackPanel x:Name="AuthPanel" Background="WhiteSmoke" Margin="0, 25, 0, 25"  Visibility="Visible" VerticalAlignment="Center" Width="{Binding ActualWidth, ElementName=MainDockPanel}">
+                
+                <Label Content="Please, identify yourself" HorizontalAlignment="Center"/>
+                
+                <Grid Margin="0, 25, 0, 25" >
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="1*"></ColumnDefinition>
+                        <ColumnDefinition Width="2*"></ColumnDefinition>
+                        <ColumnDefinition Width="4*" ></ColumnDefinition>
+                        <ColumnDefinition Width="1*"></ColumnDefinition>
+                    </Grid.ColumnDefinitions>
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="Auto"></RowDefinition>
+                        <RowDefinition Height="Auto"></RowDefinition>
+                    </Grid.RowDefinitions>
+
+                    <Label Grid.Column="1" Grid.Row="0" HorizontalAlignment="Right" Content="Login"/>
+                    <TextBox x:Name="Login" Text="Admin" HorizontalAlignment="Center" Grid.Column="2" Grid.Row="0" Width="100" TextWrapping="Wrap"/>
+                    <Label Grid.Column="1" Grid.Row="1"  HorizontalAlignment="Right" Content="Password"/>
+                    <PasswordBox x:Name="Password" Password="Admin" Grid.Column="2" HorizontalAlignment="Center" Width="100" Grid.Row="1"/>
+                </Grid>
+                <Button Content="Sign in" Width="100" Click="Signin" Background="#FFF7F3A1"/>
+            </StackPanel>
+
+            <StackPanel x:Name="MainPanel" Visibility="Collapsed">
+                
+                
+
+               
+                <Grid x:Name="Inform" Margin="0, 0, 0, 25" Height="30">
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="2*"></ColumnDefinition>
+                        <ColumnDefinition Width="1*"></ColumnDefinition>
+                        <ColumnDefinition Width="2*"></ColumnDefinition>
+                    </Grid.ColumnDefinitions>
+
+                    <Label x:Name="PosInfoLabel" Grid.Column="0" Background="#FFB9DADD" Content="Current pos: "/>
+                    <Label x:Name="CountInfoLabel" Grid.Column="2" Background="#FFB9DAFB" Content="Count: "/>
+                </Grid>
+
+                <Grid x:Name="Filters" Margin="0, 0, 0, 20" Height="80" Background="Gray">
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="1*"></ColumnDefinition>
+                        <ColumnDefinition Width="4*"></ColumnDefinition>
+                        <ColumnDefinition Width="4*"></ColumnDefinition>
+                        <ColumnDefinition Width="1*"></ColumnDefinition>
+                        <ColumnDefinition Width="4*"></ColumnDefinition>
+                    </Grid.ColumnDefinitions>
+
+                    <Grid.RowDefinitions>
+                        <RowDefinition></RowDefinition>
+                        <RowDefinition></RowDefinition>
+                        <RowDefinition></RowDefinition>
+                    </Grid.RowDefinitions>
+
+                    <Label Content="Filters" Grid.Row="0" TextBlock.FontSize="14"  Grid.Column="2" HorizontalAlignment="Center"></Label>
+
+                    <Label Grid.Column="0" Grid.Row="1" Content="From"></Label>
+                    <Label Grid.Column="0" Grid.Row="2" Content="To"></Label>
+
+                    <WindowsFormsHost Grid.Column="1" Grid.Row="1">
+                        <wf:DateTimePicker x:Name="FromDate" Format="Custom" CustomFormat="yyyy.MM.dd hh:mm" ShowUpDown="True" ValueChanged="OnDateChange"></wf:DateTimePicker>
+                    </WindowsFormsHost>
+
+                    <WindowsFormsHost Grid.Column="1" Grid.Row="2">
+                        <wf:DateTimePicker x:Name="ToDate" Format="Custom" CustomFormat="yyyy.MM.dd hh:mm" ShowUpDown="True" ValueChanged="OnDateChange"></wf:DateTimePicker>
+                    </WindowsFormsHost>
+
+                    <Label Grid.Column="3" Grid.Row="1" Content="Event"></Label>
+                    <ComboBox x:Name="EventList" Grid.Column="4" Grid.Row="1" SelectionChanged="OnEventSelection"></ComboBox>
+                    <Button Grid.Column="4" Grid.Row="2" Width="150" Content="Reset filters" Click="ResetFiltersButtonClick" Background="White"/>
+
+                </Grid>
+                
+
+
+                <DataGrid AutoGenerateColumns="False" x:Name="Logs" Height="300">
+                    <DataGrid.Columns>
+                        <DataGridTextColumn Binding="{Binding Id}" Header="EID" Width="3*">
+                            <DataGridTextColumn.ElementStyle>
+                                <Style>
+                                    <Setter Property="TextBlock.TextAlignment" Value="Center" />
+                                </Style>
+                            </DataGridTextColumn.ElementStyle>
+                            <DataGridTextColumn.HeaderStyle>
+                                <Style TargetType="DataGridColumnHeader">
+                                    <Setter Property="HorizontalContentAlignment" Value="Center" />
+                                </Style>
+                            </DataGridTextColumn.HeaderStyle>
+                        </DataGridTextColumn>
+                        <DataGridTextColumn Binding="{Binding Login}" Header="Login" Width="5*">
+                            <DataGridTextColumn.ElementStyle>
+                                <Style>
+                                    <Setter Property="TextBlock.TextAlignment" Value="Center" />
+                                </Style>
+                            </DataGridTextColumn.ElementStyle>
+                            <DataGridTextColumn.HeaderStyle>
+                                <Style TargetType="DataGridColumnHeader">
+                                    <Setter Property="HorizontalContentAlignment" Value="Center" />
+                                </Style>
+                            </DataGridTextColumn.HeaderStyle>
+                        </DataGridTextColumn>
+                        <DataGridTextColumn Binding="{Binding TimeCode}" Header="Timestamp" Width="9*">
+                            <DataGridTextColumn.ElementStyle>
+                                <Style>
+                                    <Setter Property="TextBlock.TextAlignment" Value="Center" />
+                                </Style>
+                            </DataGridTextColumn.ElementStyle>
+                            <DataGridTextColumn.HeaderStyle>
+                                <Style TargetType="DataGridColumnHeader">
+                                    <Setter Property="HorizontalContentAlignment" Value="Center" />
+                                </Style>
+                            </DataGridTextColumn.HeaderStyle>
+                        </DataGridTextColumn>
+                        <DataGridTextColumn Binding="{Binding Coords}" Header="Crds(X;Y)" Width="5*">
+                            <DataGridTextColumn.ElementStyle>
+                                <Style>
+                                    <Setter Property="TextBlock.TextAlignment" Value="Center" />
+                                </Style>
+                            </DataGridTextColumn.ElementStyle>
+                            <DataGridTextColumn.HeaderStyle>
+                                <Style TargetType="DataGridColumnHeader">
+                                    <Setter Property="HorizontalContentAlignment" Value="Center" />
+                                </Style>
+                            </DataGridTextColumn.HeaderStyle>
+                        </DataGridTextColumn>
+                        <DataGridTextColumn Binding="{Binding Type}" Header="Event" Width="9*" >
+                            <DataGridTextColumn.ElementStyle>
+                                <Style>
+                                    <Setter Property="TextBlock.TextAlignment" Value="Center" />
+                                </Style>
+                            </DataGridTextColumn.ElementStyle>
+                            <DataGridTextColumn.HeaderStyle>
+                                <Style TargetType="DataGridColumnHeader">
+                                    <Setter Property="HorizontalContentAlignment" Value="Center" />
+                                </Style>
+                            </DataGridTextColumn.HeaderStyle>
+                        </DataGridTextColumn>
+                    </DataGrid.Columns>
+                </DataGrid>
+
+                <Grid x:Name="Buttons" Margin="0, 15" Height="30">
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition></ColumnDefinition>
+                        <ColumnDefinition></ColumnDefinition>
+                        <ColumnDefinition></ColumnDefinition>
+                    </Grid.ColumnDefinitions>
+
+                    <Button x:Name="TrackButton" Style="{StaticResource TransparentStyle}" Grid.Column="0" Width="100" Height="30" Content="Track" Click="TrackTumbler" Focusable="False" MouseEnter="TrackButtonMouseEnter"/>
+                    <Button x:Name="Button" Grid.Column="1" Width="100" Height="30" Content="Notify" Click="NotifyTumbler" Background="LightSeaGreen"/>
+                    <Button Grid.Column="2" Width="100" Height="30" Content="Sign out"  Click="Signout" Background="PaleVioletRed"/>
+
+                </Grid>
+            </StackPanel>
+
+        </DockPanel>
+    </Border>
+</Window>
