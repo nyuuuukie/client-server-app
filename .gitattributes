@@ -1,0 +1,4 @@
+* linguist-vendored
+*.sql linguist-vendored=true
+*.xml linguist-vendored=true
+*.cs linguist-vendored=true
