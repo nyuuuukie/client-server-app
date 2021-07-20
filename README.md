@@ -3,6 +3,9 @@ Learning how to create simple client-server app (C#, WPF, WCF, MySQL, Entity Fra
 
 
 ## Description
+
+All development has been produced using Visual Studio 2019 and MySQL Workbench 8
+
 Client's solution (.sln) located in `ObserverClient` directory, as well as project (WPF).<br>
 Server's solution - in `ObserverService` directory (WCF) <br>
 Server console application stored in `ObserverServiceHost` directory.
@@ -10,16 +13,17 @@ Server console application stored in `ObserverServiceHost` directory.
 I havent build release version yet, so all functionality in Debug.
 
 There's a sql script (`CreateDB.sql`) that creates a mysql database. </br>
-Usage:
-```mysql -u root -p < CreateDB.sql```
+Usage: </br>
+```mysql -u <username> -p < CreateDB.sql```
+
 
 
 Dependencies:
-	- MySQL .Net Connector
-	- Entity Framework
-	- MailKit
-	- WinForms (Only for DateTimePicker)
-	- Twilio (SMS-notifier, still in progress)
+ - MySQL .Net Connector
+ - Entity Framework
+ - MailKit
+ - WinForms (Only for DateTimePicker)
+ - Twilio (SMS-notifier, still in progress)
 
 ## Useful links
 
