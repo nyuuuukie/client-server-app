@@ -55,7 +55,7 @@ Learning how to create simple client-server app (C#, WPF, WCF, MySQL, Entity Fra
 * [Connect to MySQL DB](https://stackoverflow.com/questions/21618015/how-to-connect-to-mysql-database)
 * [Connect C# to MySQL](https://www.codeproject.com/Articles/43438/Connect-C-to-MySQL)
 
-## Json
+## JSON
 * [JOIN in EF](https://stackoverflow.com/questions/21051612/entity-framework-join-3-tables)
 * [JSON](https://docs.microsoft.com/ru-ru/dotnet/standard/serialization/system-text-json-how-to?pivots=dotnet-5-0)
 * [Jquery + Json + EF + WCF](https://stackanswers.net/questions/sending-array-of-objects-to-wcf)
