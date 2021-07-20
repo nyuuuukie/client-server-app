@@ -1,7 +1,27 @@
-# client-server-app
+# Client-server with C#
 Learning how to create simple client-server app (C#, WPF, WCF, MySQL, Entity Framework)
 
-# Useful links
+
+## Description
+Client's solution (.sln) located in `ObserverClient` directory, as well as project (WPF).<br>
+Server's solution - in `ObserverService` directory (WCF) <br>
+Server console application stored in `ObserverServiceHost` directory.
+
+I havent build release version yet, so all functionality in Debug.
+
+There's a sql script (`CreateDB.sql`) that creates a mysql database. </br>
+Usage:
+```mysql -u root -p < CreateDB.sql```
+
+
+Dependencies:
+	- MySQL .Net Connector
+	- Entity Framework
+	- MailKit
+	- WinForms (Only for DateTimePicker)
+	- Twilio (SMS-notifier, still in progress)
+
+## Useful links
 
 ## WPF
   * [WPF Lessons](https://metanit.com/sharp/wpf/1.php)
